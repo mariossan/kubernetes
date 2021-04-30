@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: podtest2
+spec:
+  template:
+    # This is the pod template
+    spec:
+      containers:
+      - name: cont1
+        image: nginx:alpine
+      restartPolicy: OnFailure
+    # The pod template ends here
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: podtest3
+spec:
+  template:
+    # This is the pod template
+    spec:
+      containers:
+      - name: cont1
+        image: nginx:alpine
+      restartPolicy: OnFailure
+    # The pod template ends here

@@ -1,0 +1,26 @@
+minikube status
+minikube stop
+minikube start
+
+Elimina todo el cluster
+    $ minikube delete 
+
+    $ kubectl run podtest --image=nginx:alpine
+    $ kubectl describe pod podtest
+
+    $ kubectl api-resources
+    $ kubectl get pod podtest -o yaml
+
+    $ kubectl exec -ti podtest -- sh
+    $ kubectl logs -f podtest
+
+Manifiestos de los pods
+    Son archivos yaml https://kubernetes.io/docs/concepts/workloads/pods/ de quí saque el tamplate
+    
+Para ver la version de API
+    $ kubectl api-versions
+
+Para ejecutar un pod dentro de un yaml
+    $ kubectl apply -f pod.yaml
+    $ kubectl logs -f doscont-g87lk -c cont1
+    $ kubectl exec -ti doscont-nf7v4 -c cont2 -- sh
